@@ -18,6 +18,7 @@ var prezzoBigliettoKm = 0.21;
 console.log(prezzoBigliettoKm);
 var prezzo= (prezzoBigliettoKm * kmDaPercorrere);
 console.log(prezzo)
+document.getElementById('prezzo') .innerHTML = "mi dispiace niente sconto per te prezzo totale " + prezzo + "&euro;";
 // va applicato uno sconto del 20% per i minorenni
 var scontoMinorenni= (prezzo * 20) / 100;
 if (eta > 18) {
@@ -33,11 +34,13 @@ if (eta < 65) {
 var prezzominorenni= (prezzo - scontoMinorenni)
 if (eta < 18) {
   console.log(prezzominorenni);
+  document.getElementById('prezzo') .innerHTML = "sei minorenne puoi usufruire del prezzo scontato del 20% prezzo totale " + prezzominorenni + "&euro;";
   // document.write(prezzominorenni);
 }
 // prezzoOver65
 var prezzoOver65= (prezzo - scontoOver65)
 if (eta > 65) {
   console.log(prezzoOver65);
+    document.getElementById('prezzo') .innerHTML = "Ciao Babbo Natale!! puoi usufruire del prezzo scontato del 40% prezzo totale " + prezzoOver65 + "&euro;";
   // document.write(prezzoOver65);
 }

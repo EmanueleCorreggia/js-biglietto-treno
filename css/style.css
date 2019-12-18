@@ -1,16 +1,26 @@
 body {
-  background-color: red;
+  background-color: black;
+}
+img {
+  background-position:center;
+  background-repeat: no-repeat;
 }
 .title {
   display: flex;
   height: 300px;
   width: 100%;
-  justify-content:center;
+  justify-content: center;
 }
 h1 {
-  color:white;
+  color:red;
 }
 .container-class {
-  display: flex;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  color:red;
+}
+.compra {
+  display: flex;
+  justify-content: center;
 }
