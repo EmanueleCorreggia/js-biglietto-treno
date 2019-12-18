@@ -1,13 +1,13 @@
 // Il programma dovrà chiedere all’utente il numero di chilometri che vuole
 // percorrere
-var kmDaPercorrere= prompt('Quanti Chilometri devi fare?');
+var kmDaPercorrere= parseInt(prompt('Quanti Chilometri devi fare?'));
 console.log (kmDaPercorrere);
 console.log(isNaN(kmDaPercorrere));
 if (isNaN(kmDaPercorrere)) {
   alert('Non hai inserito un numero')
 }
 // chiedere l’età del passeggero.
-var eta= prompt('Quanti anni hai?');
+var eta= parseInt(prompt('Quanti anni hai?'));
 console.log (eta);
 console.log(isNaN(eta));
 if (isNaN(eta)) {
@@ -18,8 +18,6 @@ var prezzoBigliettoKm = 0.21;
 console.log(prezzoBigliettoKm);
 var prezzo= (prezzoBigliettoKm * kmDaPercorrere);
 console.log(prezzo)
-document.write(prezzo);
-// document.write(prezzo);
 // va applicato uno sconto del 20% per i minorenni
 var scontoMinorenni= (prezzo * 20) / 100;
 if (eta > 18) {
@@ -35,12 +33,11 @@ if (eta < 65) {
 var prezzominorenni= (prezzo - scontoMinorenni)
 if (eta < 18) {
   console.log(prezzominorenni);
-  document.write(prezzominorenni);
+  // document.write(prezzominorenni);
 }
 // prezzoOver65
 var prezzoOver65= (prezzo - scontoOver65)
 if (eta > 65) {
   console.log(prezzoOver65);
-  document.write(prezzoOver65);
+  // document.write(prezzoOver65);
 }
- 
