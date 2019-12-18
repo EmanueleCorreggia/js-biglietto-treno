@@ -17,15 +17,30 @@ if (isNaN(eta)) {
 var prezzoBigliettoKm = 0.21;
 console.log(prezzoBigliettoKm);
 var prezzo= (prezzoBigliettoKm * kmDaPercorrere);
-console.log(prezzo);
+console.log(prezzo)
 document.write(prezzo);
-
-
+// document.write(prezzo);
 // va applicato uno sconto del 20% per i minorenni
-
-
-
+var scontoMinorenni= (prezzo * 20) / 100;
+if (eta > 18) {
+  console.log(scontoMinorenni)
+}
 // sconto del 40% per gli over 65.
-
-
+var scontoOver65= (prezzo * 40) / 100;
+if (eta < 65) {
+  console.log(scontoOver65)
+}
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio.
+// prezzo minorenni
+var prezzominorenni= (prezzo - scontoMinorenni)
+if (eta < 18) {
+  console.log(prezzominorenni);
+  document.write(prezzominorenni);
+}
+// prezzoOver65
+var prezzoOver65= (prezzo - scontoOver65)
+if (eta > 65) {
+  console.log(prezzoOver65);
+  document.write(prezzoOver65);
+}
+ 
